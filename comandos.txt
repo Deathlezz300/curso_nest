@@ -1,0 +1,11 @@
+comandos utiles que no estan en el pdf
+
+crear un un pipe:
+
+primero se debe crear el modulo
+
+nest g mo common
+
+luego se crea el pipe
+
+nest g pipe common/pipes/parseMongoId --no-spec
