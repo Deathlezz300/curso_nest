@@ -40,8 +40,22 @@ export class PokemonService {
 
   }
 
-  findAll() {
-    return `This action returns all pokemon`;
+  async findAll() {
+    
+    try{
+
+      const Pokemons=await this.pokemonModel.find();
+
+      return Pokemons;
+
+    }catch(error){
+
+      console.log(error);
+
+    }
+
+
+
   }
 
   async findOne(id: string) {
@@ -106,6 +120,7 @@ export class PokemonService {
       }
 
   }
+
 
   private handleException(error:any){
     if(error.code===11000){
